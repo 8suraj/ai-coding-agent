@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #f2f4ff;
+  height: 100vh;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #f4d35e40 transparent;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f4d35e, #f4b942);
+  border-radius: 999px;
+  border: 2px solid rgba(5, 7, 15, 0.9);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f7d96f, #f4b942);
+}
