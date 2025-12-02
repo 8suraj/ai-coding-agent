@@ -1,19 +1,13 @@
-FROM --platform=linux/amd64 node:lts-alpine3.18 as builder
+FROM node:lts-alpine3.18 AS builder
 
 WORKDIR /app
 
-
 RUN apk update && apk add --no-cache git
 
-
+COPY package*.json ./
+RUN npm ci
 
 COPY . .
-
-
-
-COPY package.json /app
-
-RUN npm install 
 
 RUN npm run build
 
