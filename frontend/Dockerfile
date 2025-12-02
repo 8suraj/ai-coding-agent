@@ -9,9 +9,7 @@ RUN apk update && apk add --no-cache git
 
 COPY . .
 
-RUN chmod +x chartinglibrary_files.prod.sh
 
-RUN ./chartinglibrary_files.prod.sh
 
 COPY package.json /app
 
